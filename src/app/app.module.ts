@@ -1,16 +1,13 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
 import { AppComponent } from "./app.component";
-import { DtElementComponent } from "./dt-element/dt-element.component";
-import { DtService } from "./service/dt-service.service";
 import { ReactiveFormsModule } from "@angular/forms";
-import { MatDialogModule } from "@angular/material/dialog";
-import { DialogBoxComponent } from "./dialog-box/dialog-box.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 @NgModule({
-  declarations: [AppComponent, DtElementComponent, DialogBoxComponent],
-  imports: [BrowserModule, ReactiveFormsModule, MatDialogModule],
-  providers: [DtService],
+  declarations: [AppComponent],
+  imports: [BrowserModule, ReactiveFormsModule, BrowserAnimationsModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

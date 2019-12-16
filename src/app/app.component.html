@@ -1,1 +1,10 @@
-<app-dt-element></app-dt-element>
+<form [formGroup]='paramsForm' (ngSubmit)="onSubmit(paramsForm.valid)">
+    <div *ngFor="let item of params" class="formStyle">
+        <label for="input-control">{{item.key}}</label>
+        <input id="input-control" [type]="item.type" [value]="item.defaultValue" [formControlName]="item.key">
+    </div>
+    <button [disabled]="!paramsForm.valid">
+        Submit
+    </button>
+    {{paramsForm.value | json}}
+</form>
